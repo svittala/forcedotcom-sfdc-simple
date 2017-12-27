@@ -14,45 +14,26 @@
    
 
     <!-- PAGE HEADER -->
-    <div class="slds-page-header" role="banner">
-        
+    <div class="slds-page-header" role="banner">   
         <div class="slds-grid">
             <div class="slds-col">
                 <lightning:icon iconName="standard:avatar" size="large" alternativeText="Indicates ExpenseForm"/>
-                <p class="slds-text-heading_label">Expenses</p>
-                <h1 class="slds-text-heading_medium">My Expenses</h1>
+                <p class="slds-text-heading_label">My Expenses</p>
             </div>
         </div>
     </div>
     <!-- / PAGE HEADER -->
     
     <!-- NEW EXPENSE FORM -->
-    
     <div class="slds-col slds-col_padded slds-p-top_large">
-
         <c:expenseForm />
-        
     </div>
     <!-- / NEW EXPENSE FORM -->
-    
-    <!-- EXISTING EXPENSES -->
-    <div class="slds-grid slds-m-top_large">
-        
-        <!-- EXPENSES LIST -->
-        <div class="slds-col slds-col-rule_right slds-p-around_small
-                    slds-size_8-of-12">
-            <c:expensesList expenses="{!v.expenses}"/>
-        </div>
-        <!-- / EXPENSES LIST -->
-        
-        <!-- SOMETHING COOL -->
-        <div class="slds-col slds-p-left_large slds-size_4-of-12">
-            Bonus lesson, coming soon.
-            Watch this space for details..
-        </div>
-        <!-- / SOMETHING COOL -->
-        
-    </div>
+    <lightning:layout>
+            <lightning:layoutItem padding="around-small" size="6">
+                <c:expensesList expenses="{!v.expenses}"/>
+            </lightning:layoutItem>
+         </lightning:layout>
     <!-- / EXISTING EXPENSES -->
     
 </aura:component>

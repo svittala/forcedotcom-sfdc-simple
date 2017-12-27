@@ -2,9 +2,9 @@
 <!-- Define the newExpense object -->
  <aura:attribute name="newExpense" type="Expense__c"
       default="{ 'sobjectType': 'Expense__c',
-                     'Name': 'in side the expeseform',
+                     'Name': 'Enter the Name of Expense',
                      'Amount__c': 0,
-                     'Client__c': 'see if this is good',
+                     'Client__c': 'who is your ciient?',
                      'Date__c': '',
                      'Reimbursed__c': false }"/>
 
@@ -26,27 +26,25 @@
 
 				<!-- CREATE NEW EXPENSE FORM -->
 				<form class="slds-form_stacked">
-
-					<div class="slds-form-element slds-is-required">
-						<div class="slds-form-element__control">
-							<ui:inputText aura:id="expname" label="Expense Name"
-								class="slds-input"
-								labelClass="slds-form-element__label"
-								value="{!v.newExpense.Name}"
-								required="true"/>
-						</div>
-					</div>
-
-					<div class="slds-form-element slds-is-required">
+					<lightning:input aura:id="expname" name="expname" 
+						label="Expense Name" minlength="5" 
+						messageWhenBadInput="Your entry must be at least 5 characters." 
+						value="{!v.newExpense.Name}"
+						required="true" />	
+					<lightning:input name="amount" aura:id="amount"
+						label="Amount" type="number"
+						value="{!v.newExpense.Amount__c}"
+						required="true" />	
+					<!-- compare using sdlc form element as against new lightning input... 
+						div class="slds-form-element slds-is-required">
 							<div class="slds-form-element__control">
 								<ui:inputNumber aura:id="amount" label="Amount"
 									class="slds-input"
 									labelClass="slds-form-element__label"
 									value="{!v.newExpense.Amount__c}"
 									required="true"/>
-
 								</div>
-					</div>
+					</div  -->
 
 					<div class="slds-form-element">
 								<div class="slds-form-element__control">
@@ -58,6 +56,7 @@
 									</div>
 					</div>
 
+					<!-- Date picker currently not good with lightning input reverting -->
 					<div class="slds-form-element">
 						<div class="slds-form-element__control">
 							<ui:inputDate aura:id="expdate" label="Expense Date"
@@ -67,19 +66,13 @@
 								displayDatePicker="true"/>
 						</div>
 					</div>
+					<lightning:input name="reimbursed" aura:id="reimbursed"
+						label="Reimbursed?" type="checkbox"
+						value="{!v.newExpense.Reimbursed__c}"
+						required="false" />	
 
-					<div class="slds-form-element">
-							<ui:inputCheckbox aura:id="reimbursed" label="Reimbursed?"
-								class="slds-checkbox"
-								labelClass="slds-form-element__label"
-								value="{!v.newExpense.Reimbursed__c}"/>
-					</div>
-
-					<div class="slds-form-element">
-								<ui:button label="Create Expense"
-									class="slds-button slds-button_brand"
-									press="{!c.clickCreateExpense}"/>
-					</div>
+					<lightning:button variant="brand" label="Create Expense"
+					 onclick="{!c.clickCreateExpense}" />
 
 				</form>
 										<!-- / CREATE NEW EXPENSE FORM -->
