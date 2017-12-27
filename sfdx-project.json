@@ -1,9 +1,10 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app"
-    }
-  ],
-  "namespace": "",
-  "sourceApiVersion": "39.0"
+"packageDirectories" : [ 
+  { "path": "force-app", "default": true}, 
+  { "path" : "unpackaged" }, 
+  { "path" : "utils" } 
+],
+"namespace": "data-dream-3156-dev-ed", 
+"sfdcLoginUrl" : "https://login.salesforce.com", 
+"sourceApiVersion": "40.0"
 }

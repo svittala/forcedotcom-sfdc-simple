@@ -1,12 +1,14 @@
 {
   "country": "US",
   "edition": "Developer",
+ "description": "deep learning of lightning components",
   "orgPreferences": {
     "enabled": [
       "S1DesktopEnabled"
     ],
     "disabled": []
   },
-  "orgName": "Your Company",
-  "adminEmail": "yourname@example.com"
+  "orgName": "SunSkySFDX",
+  "adminEmail": "svittala@salesforce.com"
 }
+
