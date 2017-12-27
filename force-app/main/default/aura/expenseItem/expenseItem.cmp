@@ -4,7 +4,7 @@
 
  <!-- replace  lightning:cslds-p-top_medium:tile component -->
 
- <lightning:tile label=slds-text-heading_small="{!'/' + v.expense.Id}">
+ <lightning:tile label="{!'/' + v.expense.Id}">
         <aura:set attribute="media">
             <lightning:icon iconName="action:approval"/>
         </aura:set>
