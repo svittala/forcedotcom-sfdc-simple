@@ -2,15 +2,13 @@
     <aura:attribute name="expense" type="Expense__c"/>
    <aura:registerEvent name="updateExpense" type="c:expensesItemUpdate"/>
 
- <!-- replace slds-card with lightning:card  component -->
-  <lightning:card>
-        <aura:set attribute="title">
-                <lightning:icon iconName="action:approval" size="xx-small" alternativeText="Indicates approval"/>
-                <a aura:id="expense" href="{!'/' + v.expense.Id}">
-                    <h3>{!v.expense.Name}</h3>
-                </a>
+ <!-- replace  lightning:card with lightning:tile component -->
+
+ <lightning:tile label="{!v.expense.Name}" href="{!'/' + v.expense.Id}">
+        <aura:set attribute="media">
+            <lightning:icon iconName="action:approval"/>
         </aura:set>
-        <!-- Color the item green if the expense is reimbursed -->
+                <!-- Color the item green if the expense is reimbursed -->
         <div class="{!v.expense.Reimbursed__c == true ?
             'slds-theme_success' : 'slds-theme_warning'}">
             <section class="slds-p-horizontal_small">
@@ -31,8 +29,5 @@
                 </div>
             </section>
         </div>
-        <aura:set attribute="footer">
-            <lightning:badge label="footer"/>
-        </aura:set>
-     </lightning:card>
+    </lightning:tile>
 </aura:component>
