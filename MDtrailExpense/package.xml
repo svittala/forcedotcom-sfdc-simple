@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TrailExpense</fullName>
+    <description>Trail Head Expense Component</description>
+    <types>
+        <members>ExpensesController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Expense</members>
+        <members>ExpenseImage</members>
+        <members>expenseForm</members>
+        <members>expenseItem</members>
+        <members>expensesItemUpdate</members>
+        <members>expensesList</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Expense__c.Amount__c</members>
+        <members>Expense__c.Client__c</members>
+        <members>Expense__c.Date__c</members>
+        <members>Expense__c.Reimbursed__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Expense__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Expense_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Expense__c-Expense Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Expense__c.All</members>
+        <name>ListView</name>
+    </types>
+    <version>41.0</version>
+</Package>
