@@ -2,9 +2,9 @@
 
     <aura:attribute name="expenses" type="Expense__c[]"/>
 
-    <div class="slds-card slds-p-top--medium">
+    <div class="slds-card slds-p-top_medium">
         <header class="slds-card__header">
-            <h3 class="slds-text-heading--small">Expenses</h3>
+            <h3 class="slds-text-heading_small">Expenses</h3>
         </header>
         
         <section class="slds-card__body">

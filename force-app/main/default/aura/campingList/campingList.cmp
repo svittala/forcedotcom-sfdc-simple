@@ -12,8 +12,8 @@
     <aura:handler name="addItem" event="c:addItemEvent" action="{!c.handleAddItem}"/>
      
       <div class="slds-grid">
-        <div class="slds-col slds-col--padded slds-p-top--small">
-          <p class="slds-text-heading--label">Camping Items</p>
+        <div class="slds-col slds-col_padded slds-p-top_small">
+          <p class="slds-text-heading_label">Camping Items</p>
         </div>
       </div>
     calling caming list form
@@ -21,9 +21,9 @@
 
   
    <!-- SHOW THE EXPENSES -->
-       <div class="slds-card slds-p-top--medium">
+       <div class="slds-card slds-p-top_medium">
            <header class="slds-card__header">
-               <h3 class="slds-text-heading--small">Camping Items</h3>
+               <h3 class="slds-text-heading_small">Camping Items</h3>
            </header>
            
            <section class="slds-card__body">

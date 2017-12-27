@@ -2,9 +2,9 @@
     <aura:attribute name="expense" type="Expense__c"/>
    <aura:registerEvent name="updateExpense" type="c:expensesItemUpdate"/>
 
- <!-- replace  lightning:card with lightning:tile component -->
+ <!-- replace  lightning:cslds-p-top_medium:tile component -->
 
- <lightning:tile label="{!v.expense.Name}" href="{!'/' + v.expense.Id}">
+ <lightning:tile label=slds-text-heading_small="{!'/' + v.expense.Id}">
         <aura:set attribute="media">
             <lightning:icon iconName="action:approval"/>
         </aura:set>

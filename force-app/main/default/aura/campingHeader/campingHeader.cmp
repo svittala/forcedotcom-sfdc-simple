@@ -3,7 +3,7 @@
     <div class="slds-page-header" role="banner">
       <div class="slds-grid">
         <div class="slds-col">
-           <H1 class="slds-text-heading--medium">Camping List</H1>
+           <H1 class="slds-text-heading_medium">Camping List</H1>
         </div>
       </div>
     </div>
