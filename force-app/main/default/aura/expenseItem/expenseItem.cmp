@@ -1,4 +1,5 @@
 <aura:component >
+    <lightning:icon iconName="action:approval" size="xx-small" alternativeText="Indicates approval"/>
     <aura:attribute name="expense" type="Expense__c"/>
    <aura:registerEvent name="updateExpense" type="c:expensesItemUpdate"/>
 
@@ -6,7 +7,7 @@
 
         <!-- Color the item green if the expense is reimbursed -->
         <div class="{!v.expense.Reimbursed__c == true ?
-            'slds-theme--success' : 'slds-theme--warning'}">
+            'slds-theme_success' : 'slds-theme_warning'}">
 
             <header class="slds-card__header slds-grid grid--flex-spread">
                 <a aura:id="expense" href="{!'/' + v.expense.Id}">

@@ -6,5 +6,5 @@
 ],
 "namespace": "data-dream-3156-dev-ed", 
 "sfdcLoginUrl" : "https://login.salesforce.com", 
-"sourceApiVersion": "40.0"
+"sourceApiVersion": "41.0"
 }

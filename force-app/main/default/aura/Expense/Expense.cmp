@@ -1,5 +1,6 @@
 <aura:component controller="ExpensesController">
-     <ltng:require styles="/resource/ns__slds/assets/styles/salesforce-lightning-design-system-ltng.css"/>
+    
+	
     <aura:attribute name="expenses" type="Expense__c[]"/>
     
     <aura:registerEvent name="createExpense" type="c:expensesItemUpdate"/>
@@ -17,11 +18,8 @@
         
         <div class="slds-grid">
             <div class="slds-col">
-                <c:ExpenseImage />
+                <lightning:icon iconName="standard:avatar" size="large" alternativeText="Indicates ExpenseForm"/>
                 <p class="slds-text-heading--label">Expenses</p>
-                <span class="slds-avatar slds-avatar--x-small">
-                    <img src="/assets/images/avatar2.jpg" alt="meaningful text" />
-                </span>
                 <h1 class="slds-text-heading--medium">My Expenses</h1>
             </div>
         </div>
